@@ -1,0 +1,45 @@
+#+TITLE: Notes: Perl Programming Language
+
+#+OPTIONS: toc:nil
+#+LaTeX_CLASS_OPTIONS: [a4paper,twoside]
+#+LaTeX_CLASS_OPTIONS: [captions=tableheading]
+
+#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+
+#+LaTeX_HEADER: \hypersetup {
+#+LaTeX_HEADER:     colorlinks,
+#+LaTeX_HEADER:     citecolor=black,
+#+LaTeX_HEADER:     filecolor=black,
+#+LaTeX_HEADER:     linkcolor=blue,
+#+LaTeX_HEADER:     urlcolor=blue
+#+LaTeX_HEADER: }
+
+#+LATEX_COMPILER: pdflatex
+#+OPTIONS: author:nil date:t
+#+LATEX: \tableofcontents
+
+* Intruduction
+  hello, this is Perl!
+
+  #+BEGIN_SRC perl
+  #!/usr/bin/perl
+  # run: chmod +ox
+  print @ARGV;
+  #+END_SRC
+
+** data types
+   #+BEGIN_QUOTE
+   $scalar --- "A scalar is a value that Perl treats as a single unit, like a number or a word"
+   #+END_QUOTE
+   
+   #+BEGIN_QUOTE
+   @array --- "An array is an ordered collection of elements, where the elements are scalars"
+   #+END_QUOTE
+
+** modules
+*** pragma 
+   #+BEGIN_QUOTE
+   A pragma is a module that controls the behavior of Perl. 
+   Use the pragma using =use strict;= -- pre-pend it to your source code.
+   #+END_QUOTE
+
