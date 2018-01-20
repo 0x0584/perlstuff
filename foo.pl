@@ -6,10 +6,20 @@
 #    CREATED: 01/19/2018
 # 
 
-print @ARGV;
-print "THIS IS A TEST\n";
+use strict;			# this is a `pragma`
 
-print "@ARGV\t";
-print 'sss';
+sub echo {
+    print "@_";			# @_: array of the params
+				# that are passed to the sub
+				# routine 
+				# (while calling it maybe?)
+    print "this is a fucking test";
+}
+
+# print "THIS IS A TEST\n";
+# print @ARGV, "another one"."HAHA\n";
+
+print @ARGV, "\n";
+print "@ARGV", "\n";
 
 print '@ARGV\t';

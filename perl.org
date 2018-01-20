@@ -4,7 +4,7 @@
 #+LaTeX_CLASS_OPTIONS: [a4paper,twoside]
 #+LaTeX_CLASS_OPTIONS: [captions=tableheading]
 
-#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+#+LATEX_HEADER: \usepackage[margin=0.85in]{geometry}
 
 #+LaTeX_HEADER: \hypersetup {
 #+LaTeX_HEADER:     colorlinks,
@@ -21,6 +21,7 @@
 * Intruduction
   hello, this is Perl!
 
+  #+CAPTION: code #0
   #+BEGIN_SRC perl
   #!/usr/bin/perl
   # run: chmod +ox
@@ -35,11 +36,33 @@
    #+BEGIN_QUOTE
    @array --- "An array is an ordered collection of elements, where the elements are scalars"
    #+END_QUOTE
+*** variables 
+
 
 ** modules
 *** pragma 
-   #+BEGIN_QUOTE
-   A pragma is a module that controls the behavior of Perl. 
-   Use the pragma using =use strict;= -- pre-pend it to your source code.
-   #+END_QUOTE
+    #+BEGIN_QUOTE
+    A pragma is a module that controls the behavior of Perl. 
+    #+END_QUOTE
 
+    #+BEGIN_QUOTE 
+    strict pragma change the behavior of the perl compiler. \\ 
+    Use the pragma using =use strict;= --- pre-pend it to your source code.
+    #+END_QUOTE   
+
+** subroutines
+   #+CAPTION: code #1
+   #+BEGIN_SRC perl
+   # this is the same as code #0, it's just more complicated
+   sub echo {
+     print "@_\n";
+   }
+   echo @ARGV
+   #+END_SRC
+
+   + All subroutine declarations start with sub followed by the name of the subrou- tine and the body. 
+   + The body of the subroutine is a block of statements enclosed in squiggly-braces. 
+   
+   #+BEGIN_QUOTE
+   In this case, the block contains a single statement.
+   #+END_QUOTE
