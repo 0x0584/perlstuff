@@ -1,0 +1,92 @@
+% Created 2018-01-19 Fri 16:22
+% Intended LaTeX compiler: pdflatex
+\documentclass[captions=tableheading]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[margin=0.85in]{geometry}
+\hypersetup {
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=blue,
+urlcolor=blue
+}
+\date{\today}
+\title{Notes: Perl Programming Language}
+\hypersetup{
+ pdfauthor={Anas Rchid},
+ pdftitle={Notes: Perl Programming Language},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.1.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Intruduction}
+\label{sec:orgd3df6ce}
+hello, this is Perl!
+
+\begin{verbatim}
+#!/usr/bin/perl
+# run: chmod +ox
+print @ARGV;
+\end{verbatim}
+\captionof{figure}{code \#0}
+
+\subsection{data types}
+\label{sec:org85bb76b}
+\begin{quote}
+\$scalar --- "A scalar is a value that Perl treats as a single unit, like a number or a word"
+\end{quote}
+
+\begin{quote}
+@array --- "An array is an ordered collection of elements, where the elements are scalars"
+\end{quote}
+
+\subsection{modules}
+\label{sec:org08f3623}
+\subsubsection{pragma}
+\label{sec:org8d3c8c1}
+\begin{quote}
+A pragma is a module that controls the behavior of Perl. 
+\end{quote}
+
+\begin{quote}
+strict pragma change the behavior of the perl compiler. \\
+Use the pragma using \texttt{use strict;} --- pre-pend it to your source code.
+\end{quote}
+
+\subsection{subroutines}
+\label{sec:org0710fc6}
+\begin{verbatim}
+# this is the same as code #0, it's just more complicated
+sub echo {
+  print "@_\n";
+}
+echo @ARGV
+\end{verbatim}
+\captionof{figure}{code \#1}
+
+\begin{itemize}
+\item All subroutine declarations start with sub followed by the name of the subrou- tine and the body.
+\item The body of the subroutine is a block of statements enclosed in squiggly-braces.
+\end{itemize}
+
+\begin{quote}
+In this case, the block contains a single statement.
+\end{quote}
+\end{document}
