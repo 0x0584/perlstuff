@@ -28,22 +28,32 @@ use warnings;
 # ========================================================================
 my $ERR = 'ERR';
 
-open my $fin, '<', 'perl.org' or die ($ERR);
+# open my $fin, '<', 'perl.org' or die ($ERR);
 
-while (my $line = <$fin>) {
-     # print chomp $line;       # this is not logical, it would print
-				# the return value of chomp
-     # chomp $line;		# remove '\n'
-     # print $line;
+# while (my $line = <$fin>) {
+#      # print chomp $line;       # this is not logical, it would print
+# 				# the return value of chomp
+#      # chomp $line;		# remove '\n'
+#      # print $line;
+# }
+
+# sub foundin {
+#      my $dict = $_[0];
+#      my $count = 5;
+
+#      print $dict;
+
+#      return $count;
+# }
+
+# print foundin 'test';
+
+sub ff {
+    my $f = 1;
+    state $f;
+
+    print $f;
 }
 
-sub foundin {
-     my $dict = $_[0];
-     my $count = 5;
-
-     print $dict;
-
-     return $count;
-}
-
-print foundin 'test';
+print ff;
+print ff;
